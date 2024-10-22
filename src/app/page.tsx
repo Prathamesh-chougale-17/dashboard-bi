@@ -73,16 +73,16 @@ const FloatingCard = ({
 
 const HomePage = () => {
   return (
-    <div className="min-h-screen w-full overflow-hidden">
+    <div className="w-full overflow-hidden">
       <main>
-        <section className="min-h-screen flex flex-col justify-center items-center relative">
+        <section className="min-h-[75vh] flex flex-col justify-center items-center relative">
           <motion.h1
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
             className="text-6xl md:text-8xl font-extrabold text-center mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500"
           >
-            Welcome to the Future
+            Welcome to the Adani Dashboard
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 50 }}
@@ -90,59 +90,19 @@ const HomePage = () => {
             transition={{ duration: 0.8, delay: 0.7 }}
             className="text-xl md:text-2xl text-center mb-12 text-black/80 dark:text-white/80 max-w-2xl"
           >
-            Experience web development like never before. Dive into a world
-            where creativity meets technology.
+            Dashboard for Adani Limited Market Analysis
           </motion.p>
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 1 }}
           >
-            <Link href={"/service"}>
+            <Link href={"/dashboard"}>
               <Button className="bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:shadow-xl transition duration-300">
                 Get Started
               </Button>
             </Link>
           </motion.div>
-        </section>
-
-        <section className="py-12 lg:py-24">
-          <div className="container mx-auto px-6">
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
-              Our Stellar Services
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <FloatingCard
-                title="Quantum Web Design"
-                content="Push the boundaries of design with our cutting-edge approach that blends aesthetics with functionality."
-              />
-              <FloatingCard
-                title="AI-Powered Development"
-                content="Harness the power of artificial intelligence to create smart, adaptive web applications."
-              />
-              <FloatingCard
-                title="Blockchain Integration"
-                content="Seamlessly integrate blockchain technology into your web projects for enhanced security and transparency."
-              />
-            </div>
-          </div>
-        </section>
-
-        <section className="py-12 lg:py-24">
-          <div className="container mx-auto px-6 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-8">
-              Ready to Start Your Journey?
-            </h2>
-            <p className="text-xl mb-12 text-black/80 dark:text-white/80 max-w-2xl mx-auto">
-              Join us in shaping the future of web development. Let&apos;s
-              create something extraordinary together.
-            </p>
-            <Link href={"/contact"}>
-              <Button className="bg-gradient-to-r from-green-400 to-blue-500 hover:from-green-500 hover:to-blue-600 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:shadow-xl transition duration-300">
-                Contact Us
-              </Button>
-            </Link>
-          </div>
         </section>
       </main>
     </div>

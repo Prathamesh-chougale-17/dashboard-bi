@@ -15,7 +15,6 @@ import {
   SheetTitle,
   SheetDescription,
 } from "@/components/ui/sheet";
-import { Input } from "../ui/input";
 import ModeToggle from "./darkmode";
 
 const Navbar: React.FC = () => {
@@ -23,9 +22,7 @@ const Navbar: React.FC = () => {
 
   const routes = [
     { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
-    { href: "/services", label: "Services" },
-    { href: "/contact", label: "Contact" },
+    { href: "/dashboard", label: "Dashboard" },
   ];
 
   return (
@@ -58,7 +55,7 @@ const Navbar: React.FC = () => {
         <SheetContent side="left">
           <SheetTitle className="ml-3 mb-3">
             <Package2 className="h-6 w-6" />
-            <span className="sr-only">Acme Inc</span>
+            <span className="sr-only">Adani Dashboard</span>
           </SheetTitle>
           <SheetDescription></SheetDescription>
           <nav className="flex flex-col gap-4">
@@ -76,16 +73,7 @@ const Navbar: React.FC = () => {
         </SheetContent>
       </Sheet>
       <div className="flex w-full items-center gap-4 md:ml-auto md:gap-2 lg:gap-4">
-        <form className="ml-auto flex-1 sm:flex-initial">
-          <div className="relative">
-            <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
-            <Input
-              type="search"
-              placeholder="Search products..."
-              className="pl-8 sm:w-[300px] md:w-[200px] lg:w-[300px]"
-            />
-          </div>
-        </form>
+        <form className="ml-auto flex-1 sm:flex-initial"></form>
         <ModeToggle />
         <SignedOut>
           <SignInButton />

@@ -21,7 +21,6 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
       >
         {children}
       </motion.main>
-      <Footer />
     </motion.div>
   );
 };
