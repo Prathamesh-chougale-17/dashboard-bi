@@ -296,7 +296,7 @@ const DashboardClient = ({ initialData }: { initialData: StockData[] }) => {
 
   return (
     <div className="space-y-6">
-      <h1 className="text-3xl font-bold">Stock Market Advanced Analytics</h1>
+      <h1 className="text-3xl font-bold">Adani Analytics</h1>
 
       {/* Filters */}
       <Card>
