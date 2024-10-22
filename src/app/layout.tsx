@@ -7,7 +7,7 @@ import { BackgroundBeamsWithCollision } from "@/components/animations/background
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: "Nextjs Template",
+  title: "Adani Dashboard",
   description: "Created by Prathamesh Chougale",
 };
 
