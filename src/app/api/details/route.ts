@@ -9,6 +9,8 @@ export async function GET(request: Request) {
   const startDate = searchParams.get("startDate");
   const endDate = searchParams.get("endDate");
 
+  console.log({ category, state, paymentMode, startDate, endDate });
+
   try {
     const client = await clientPromise;
     const db = client.db("powerbi");
@@ -18,20 +20,10 @@ export async function GET(request: Request) {
     if (category) query.Category = category;
     if (paymentMode) query.PaymentMode = paymentMode;
 
-    if (startDate && endDate) {
-      query["Order ID"] = {
-        $in: await db
-          .collection("order")
-          .distinct("Order ID", {
-            "Order Date": {
-              $gte: startDate,
-              $lte: endDate,
-            },
-          }),
-      };
-    }
+    console.log(query);
 
     const details = await db.collection("details").find(query).toArray();
+    console.log(details);
     return NextResponse.json(details);
   } catch (error) {
     return NextResponse.json(
