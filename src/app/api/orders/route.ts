@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import clientPromise from "@/lib/clientpromise";
 
-export async function GET(request: Request) {
+export async function GET() {
   try {
     const client = await clientPromise;
     const db = client.db("powerbi");
