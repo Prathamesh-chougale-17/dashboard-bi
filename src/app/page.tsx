@@ -15,8 +15,8 @@ const HomePage = () => {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="text-6xl md:text-8xl font-extrabold text-center mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500"
           >
-            <p>Welcome to the Atharv</p>
-            E-commerce Dashboard
+            <p>Welcome to the Global</p>
+            Super Market Dashboard
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 50 }}
